@@ -16,7 +16,7 @@ class LoginForm(Form):
 
 
 class RegistroForm(LoginForm):
-    email = StringField('email', [validators.DataRequired(), validators.Email()])
+    email = StringField('email', [validators.DataRequired()])
 
     def dameEmail(self) -> str:
         return self.email.data
